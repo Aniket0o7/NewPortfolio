@@ -64,8 +64,10 @@ nav ul li a:hover::after{
 
 #about{
     padding: 80px 0;
-    color: rgb(243, 60, 4);
+    color: rgb(117, 23, 5);
     filter: brightness(200%);
+    font-size: 20px;
+    font-weight: bold;
 }
 .row{
     display: flex;
@@ -87,10 +89,10 @@ nav ul li a:hover::after{
 .sub-title{
     font-size: 60px;
     font-weight: 600;
-    color: rgb(229, 190, 18);
+    color: rgb(104, 9, 247);
 }
 .sub-title p{
     font-size: 60px;
     font-weight: 600;
-    color: rgb(15, 16, 16);
+    color: rgb(23, 223, 223);
 }
