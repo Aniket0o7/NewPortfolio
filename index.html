@@ -14,14 +14,38 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="service.html">Service</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="certificate.html">Certificate</a></li>
                     <li><a href="contact.html">Contact</a></li>                        
                 </ul>
             </nav>
 
             <div class="header-text">
-                <p>Salesforce Developer</p>
+                <p>MBA(Marketing), B.TECH(CSE)</p>
                 <h1>Hi, I'm <span>Aniket Maity</span> from India</h1>
+            </div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const headerText = document.querySelector(".header-text h1");
+                    const text = "Hi, I'm Aniket Maity from India.";
+                    let index = 0;
+                
+                    function typeLetterByLetter() {
+                        if (index < text.length) {
+                            headerText.innerHTML = text.slice(0, index + 1);
+                            index++;
+                            setTimeout(typeLetterByLetter, 100); // Adjust speed here (in ms)
+                        }
+                    }
+                
+                    headerText.style.opacity = 1; // Show text before animation starts
+                    typeLetterByLetter();
+                });
+                </script>
+                
+
+            <div class="image-container">
+                <img src="images/dp.png" alt="Your Image">
             </div>
         </div>
     </div>
