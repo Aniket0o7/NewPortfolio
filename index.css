@@ -79,16 +79,49 @@ nav ul li a:hover::after{
     color: #ff004f;
 }
 
+/* Default Styles */
 .image-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
     position: absolute;
-    right: 15%; /* Position from the right */
-    top: 45%; /* Position from the top */
-    transform: translateY(-50%); /* Center vertically */
+    right: 15%;
+    top: 45%;
+    transform: translateY(-50%);
 }
 
 .image-container img {
-    width: 210px; /* Adjust image width */
+    width: 210px;
     height: auto;
-    border-radius: 60%; /* Optional: make the image circular */
-    box-shadow: 0 15px 8px rgba(0, 0, 0, 0.3); /* Optional: add shadow */
+    border-radius: 60%;
+    box-shadow: 0 15px 8px rgba(0, 0, 0, 0.3);
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Stack image below text */
+    .header-text {
+        text-align: center;
+        font-size: 28px; /* Adjust text size for mobile */
+    }
+
+    .header-text h1 {
+        font-size: 40px; /* Adjust heading size */
+    }
+
+    .image-container {
+        position: relative; /* Remove absolute positioning */
+        top: auto;
+        right: auto;
+        transform: none;
+        margin-top: 20px; /* Add space between text and image */
+        justify-content: center;
+    }
+
+    .image-container img {
+        width: 150px; /* Reduce image size for mobile */
+    }
+}
+

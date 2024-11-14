@@ -60,3 +60,77 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
+
+.certificate-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adds space between the two sections */
+    margin-top: 50px;
+    color: #9000ff;
+}
+
+.developer-certificate,
+.mba-certificate {
+    flex: 1; /* Ensures both columns take equal space */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centers text inside the box */
+}
+
+/* Background colors for distinction */
+.developer-certificate {
+    background-color: #e0f7fa; /* Light blue */
+}
+
+.mba-certificate {
+    background-color: #fff3e0; /* Light orange */
+}
+
+.developer-certificate ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+}
+
+.developer-certificate ul li {
+    margin: 8px 0; /* Adds space between links */
+}
+
+.developer-certificate ul li a {
+    color: #0073e6; /* Link color */
+    text-decoration: none; /* Removes underline */
+}
+
+.developer-certificate ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.mba-certificate ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+}
+
+.mba-certificate ul li {
+    margin: 8px 0; /* Adds space between links */
+}
+
+.mba-certificate ul li a {
+    color: #0073e6; /* Link color */
+    text-decoration: none; /* Removes underline */
+}
+
+.mba-certificate ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .certificate-container {
+        flex-direction: column; /* Stacks them vertically on smaller screens */
+    }
+}
