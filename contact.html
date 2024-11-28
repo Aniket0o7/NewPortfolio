@@ -13,7 +13,6 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="service.html">Service</a></li>
                     <li><a href="certificate.html">Certificate</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -22,7 +21,7 @@
                <!-- Contact Form Section -->
     <div class="contact-form-container">
         <h2>Contact Me</h2>
-        <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+        <form action="mailto:anike99maity@gmail.com" method="POST" enctype="text/plain">
             <label for="name">Name *</label>
             <input type="text" id="name" name="name" required>
 
@@ -42,6 +41,14 @@
         </form>
     </div>
 
+    <!-- Popup Modal -->
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <p>Your message has been sent!</p>
+        </div>
+    </div>
+
     <!-- Contact Information Section -->
     <div class="contact-info">
         <a href="https://www.linkedin.com/in/aniket-maity-983918174/" target="_blank" class="linkedin-btn">LinkedIn Profile</a>
@@ -50,5 +57,26 @@
     </div>
         </div>
     </div>
+
+    <script>
+        // Show the popup modal
+        function showPopup(event) {
+            event.preventDefault(); // Prevent form from actually submitting
+            document.getElementById("popupModal").style.display = "block";
+        }
+
+        // Close the popup modal
+        function closePopup() {
+            document.getElementById("popupModal").style.display = "none";
+        }
+
+        // Close the modal if user clicks outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById("popupModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
 </body>
 </html>
